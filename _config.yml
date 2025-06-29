@@ -1,0 +1,39 @@
+# GitHub Pages Configuration
+title: "Retro Tetris - Classic 1980s Style Game"
+description: "A faithful recreation of the classic Tetris game with authentic 1980s arcade styling, complete with background music and sound effects."
+url: "https://yourusername.github.io"
+baseurl: "/retro-tetris"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Exclude files from processing
+exclude:
+  - tetris/
+  - "*.py"
+  - requirements.txt
+  - setup_game.py
+  - retro_tetris_main.py
+  - README.md
+  - LICENSE
+  - .gitignore
+
+# Include files
+include:
+  - index.html
+  - style.css
+  - script.js
+
+# SEO and social
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Social links
+github_username: yourusername
+twitter_username: yourusername
+
+# Google Analytics (optional)
+# google_analytics: UA-XXXXXXXX-X

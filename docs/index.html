@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Tetris - Classic 1980s Style Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <!-- Header -->
+        <header class="hero">
+            <h1 class="title">🎮 RETRO TETRIS</h1>
+            <p class="subtitle">Classic 1980s Arcade Experience</p>
+            <div class="badges">
+                <img src="https://img.shields.io/badge/python-v3.6+-blue.svg" alt="Python">
+                <img src="https://img.shields.io/badge/pygame-v2.0+-green.svg" alt="Pygame">
+                <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+            </div>
+        </header>
+
+        <!-- Game Preview -->
+        <section class="preview">
+            <div class="game-mockup">
+                <div class="screen">
+                    <div class="tetris-grid">
+                        <div class="tetris-piece t-piece"></div>
+                        <div class="tetris-piece i-piece"></div>
+                        <div class="tetris-piece o-piece"></div>
+                        <div class="tetris-piece s-piece"></div>
+                    </div>
+                    <div class="game-info">
+                        <div class="score">SCORE: 12,340</div>
+                        <div class="level">LEVEL: 5</div>
+                        <div class="lines">LINES: 23</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <h2>🎯 Game Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Authentic 1980s Style</h3>
+                    <p>Classic color palette, retro typography, and smooth 60 FPS gameplay</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Universal Audio System</h3>
+                    <p>Background music and sound effects with cross-platform compatibility</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Classic Gameplay</h3>
+                    <p>7 Tetris pieces, line clearing, progressive difficulty, and pause functionality</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Cross-Platform</h3>
+                    <p>Works on Windows, macOS, and Linux with automatic audio fallbacks</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Controls -->
+        <section class="controls">
+            <h2>🎮 Game Controls</h2>
+            <div class="controls-grid">
+                <div class="control-item">
+                    <kbd>← →</kbd>
+                    <span>Move piece left/right</span>
+                </div>
+                <div class="control-item">
+                    <kbd>↓</kbd>
+                    <span>Soft drop (faster fall)</span>
+                </div>
+                <div class="control-item">
+                    <kbd>↑</kbd>
+                    <span>Rotate piece</span>
+                </div>
+                <div class="control-item">
+                    <kbd>P</kbd>
+                    <span>Pause/Resume game</span>
+                </div>
+                <div class="control-item">
+                    <kbd>R</kbd>
+                    <span>Restart (when game over)</span>
+                </div>
+                <div class="control-item">
+                    <kbd>ESC</kbd>
+                    <span>Quit game</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="download">
+            <h2>🚀 Get Started</h2>
+            <div class="download-options">
+                <div class="download-card primary">
+                    <h3>📥 Download Game</h3>
+                    <p>Get the latest release</p>
+                    <a href="https://github.com/yourusername/retro-tetris/releases" class="btn btn-primary">
+                        Download Latest Release
+                    </a>
+                </div>
+                <div class="download-card">
+                    <h3>📋 Clone Repository</h3>
+                    <p>Get the source code</p>
+                    <a href="https://github.com/yourusername/retro-tetris" class="btn btn-secondary">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation -->
+        <section class="installation">
+            <h2>⚡ Quick Installation</h2>
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="code-title">Terminal</span>
+                    <button class="copy-btn" onclick="copyCode()">Copy</button>
+                </div>
+                <pre id="install-code"><code># Clone the repository
+git clone https://github.com/yourusername/retro-tetris.git
+cd retro-tetris
+
+# Install dependencies
+pip install pygame
+
+# Run the game
+python retro_tetris_main.py</code></pre>
+            </div>
+        </section>
+
+        <!-- System Requirements -->
+        <section class="requirements">
+            <h2>🔧 System Requirements</h2>
+            <div class="req-grid">
+                <div class="req-item">
+                    <strong>Python:</strong> 3.6 or higher
+                </div>
+                <div class="req-item">
+                    <strong>Pygame:</strong> 2.0 or higher
+                </div>
+                <div class="req-item">
+                    <strong>OS:</strong> Windows, macOS, or Linux
+                </div>
+                <div class="req-item">
+                    <strong>Memory:</strong> 50MB RAM
+                </div>
+                <div class="req-item">
+                    <strong>Storage:</strong> 10MB disk space
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>🎮 Built with Python & Pygame</p>
+                <p>Inspired by the classic Tetris by Alexey Pajitnov</p>
+                <div class="footer-links">
+                    <a href="https://github.com/yourusername/retro-tetris">GitHub</a>
+                    <a href="https://github.com/yourusername/retro-tetris/issues">Report Issues</a>
+                    <a href="https://github.com/yourusername/retro-tetris/blob/main/LICENSE">License</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
