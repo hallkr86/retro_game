@@ -316,6 +316,51 @@ body {
     margin: 5px 0;
 }
 
+/* Personal Story Section */
+.personal-story {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.personal-story h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #4ecdc4;
+}
+
+.story-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.story-container::before {
+    content: '🎮';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    background: #1a1a1a;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #4ecdc4;
+}
+
+.story-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    font-style: italic;
+    margin: 0;
+    text-align: left;
+}
+
 /* Features Section */
 .features {
     margin: 80px 0;
@@ -628,6 +673,16 @@ code {
         max-width: 100%;
         height: 250px; /* Smaller height on mobile */
         border-radius: 8px;
+    }
+    
+    .story-container {
+        margin: 0 10px;
+        padding: 30px 20px;
+    }
+    
+    .story-content p {
+        font-size: 1.1rem;
+        text-align: center;
     }
     
     .screenshot-container {
