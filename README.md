@@ -2,7 +2,7 @@
 
 A faithful recreation of the classic Tetris game with authentic 1980s arcade styling, complete with background music and sound effects.
 
-![Retro Tetris Gameplay](tetrisGameActive.png)
+![Retro Tetris Gameplay](assets/tetrisGameActive.png)
 
 ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
 ![Pygame](https://img.shields.io/badge/pygame-v2.0+-green.svg)
