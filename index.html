@@ -25,14 +25,18 @@
         <section class="preview">
             <h2>🎬 Gameplay Demo</h2>
             <div class="video-container">
-                <iframe 
-                    src="https://app.screencastify.com/watch/0YvAN7WGmyA8NVLDXxhB" 
-                    frameborder="0" 
-                    allowfullscreen
-                    title="Retro Tetris Gameplay Demo">
-                </iframe>
+                <!-- HTML5 Video Player -->
+                <video 
+                    class="gameplay-video" 
+                    controls 
+                    preload="metadata"
+                    poster="tetrisGameActive.png">
+                    <source src="gameplay-demo.mp4" type="video/mp4">
+                    <!-- Fallback for browsers that don't support video -->
+                    <p>Your browser doesn't support HTML5 video. Please update your browser to view the gameplay demo.</p>
+                </video>
             </div>
-            <p class="video-caption">Watch the classic Tetris gameplay in action!</p>
+            <p class="video-caption">Watch the classic Tetris gameplay with audio!</p>
             
             <!-- Game Screenshot -->
             <div class="screenshot-container">

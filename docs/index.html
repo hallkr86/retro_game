@@ -25,14 +25,18 @@
         <section class="preview">
             <h2>🎬 Gameplay Demo</h2>
             <div class="video-container">
-                <iframe 
-                    src="https://app.screencastify.com/watch/0YvAN7WGmyA8NVLDXxhB" 
-                    frameborder="0" 
-                    allowfullscreen
-                    title="Retro Tetris Gameplay Demo">
-                </iframe>
+                <!-- HTML5 Video Player -->
+                <video 
+                    class="gameplay-video" 
+                    controls 
+                    preload="metadata"
+                    poster="tetrisGameActive.png">
+                    <source src="gameplay-demo.mp4" type="video/mp4">
+                    <!-- Fallback for browsers that don't support video -->
+                    <p>Your browser doesn't support HTML5 video. Please update your browser to view the gameplay demo.</p>
+                </video>
             </div>
-            <p class="video-caption">Watch the classic Tetris gameplay in action!</p>
+            <p class="video-caption">Watch the classic Tetris gameplay with audio!</p>
             
             <!-- Game Screenshot -->
             <div class="screenshot-container">
@@ -106,14 +110,14 @@
                 <div class="download-card primary">
                     <h3>📥 Download Game</h3>
                     <p>Get the latest release</p>
-                    <a href="https://hallkr86.github.io/retro_game/" class="btn btn-primary">
+                    <a href="https://github.com/yourusername/retro-tetris/releases" class="btn btn-primary">
                         Download Latest Release
                     </a>
                 </div>
                 <div class="download-card">
                     <h3>📋 Clone Repository</h3>
                     <p>Get the source code</p>
-                    <a href="https://github.com/hallkr86/retro_game" class="btn btn-secondary">
+                    <a href="https://github.com/yourusername/retro-tetris" class="btn btn-secondary">
                         View on GitHub
                     </a>
                 </div>
@@ -129,7 +133,7 @@
                     <button class="copy-btn" onclick="copyCode()">Copy</button>
                 </div>
                 <pre id="install-code"><code># Clone the repository
-git clone https://github.com/hallkr86/retro_game
+git clone https://github.com/yourusername/retro-tetris.git
 cd retro-tetris
 
 # Install dependencies
@@ -168,8 +172,9 @@ python retro_tetris_main.py</code></pre>
                 <p>🎮 Built with Python & Pygame</p>
                 <p>Inspired by the classic Tetris by Alexey Pajitnov</p>
                 <div class="footer-links">
-                    <a href="https://github.com/hallkr86/retro_game">GitHub</a>
-                   
+                    <a href="https://github.com/yourusername/retro-tetris">GitHub</a>
+                    <a href="https://github.com/yourusername/retro-tetris/issues">Report Issues</a>
+                    <a href="https://github.com/yourusername/retro-tetris/blob/main/LICENSE">License</a>
                 </div>
             </div>
         </footer>
