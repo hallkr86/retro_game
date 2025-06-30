@@ -123,13 +123,84 @@ body {
     padding: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     border: 2px solid #333;
+    overflow: hidden; /* Hide overflow for cropping */
 }
 
-.video-container iframe {
+/* HTML5 Video Player Styling */
+.gameplay-video {
     width: 100%;
-    height: 450px;
+    max-width: 600px;  /* Reasonable size */
+    height: 400px;     /* Fixed aspect ratio */
     border-radius: 10px;
     background: #000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    outline: none;
+    object-fit: cover; /* Crop to fit */
+    object-position: center center; /* Center the crop */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Custom video controls styling */
+.gameplay-video::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0 0 10px 10px;
+}
+
+.gameplay-video::-webkit-media-controls-play-button {
+    background-color: #4ecdc4;
+    border-radius: 50%;
+}
+
+.gameplay-video::-webkit-media-controls-play-button:hover {
+    background-color: #ff6b6b;
+}
+
+.gameplay-video::-webkit-media-controls-volume-slider,
+.gameplay-video::-webkit-media-controls-timeline {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.gameplay-video::-webkit-media-controls-current-time-display,
+.gameplay-video::-webkit-media-controls-time-remaining-display {
+    color: #4ecdc4;
+    font-family: 'Orbitron', monospace;
+}
+
+/* Video fallback link styling */
+.video-fallback-link {
+    color: #4ecdc4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.video-fallback-link:hover {
+    color: #ff6b6b;
+    text-decoration: underline;
+}
+
+/* Add subtle glow effect to video container */
+.video-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #4ecdc4, #ff6b6b, #4ecdc4);
+    background-size: 400% 400%;
+    border-radius: 17px;
+    z-index: -1;
+    animation: gradient-border 3s ease infinite;
+    opacity: 0.3;
+}
+
+@keyframes gradient-border {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .video-caption {
@@ -553,8 +624,10 @@ code {
         margin: 0 10px 30px 10px;
     }
     
-    .video-container iframe {
-        height: 250px;
+    .gameplay-video {
+        max-width: 100%;
+        height: 250px; /* Smaller height on mobile */
+        border-radius: 8px;
     }
     
     .screenshot-container {
