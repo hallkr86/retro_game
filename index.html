@@ -30,13 +30,15 @@
                     class="gameplay-video" 
                     controls 
                     preload="metadata"
-                    poster="assets/tetrisGameActive.png">
+                    poster="assets/tetrisGameActive.png"
+                    muted
+                    onvolumechange="this.muted=true;this.volume=0;">
                     <source src="assets/gameplay-demo.mp4" type="video/mp4">
                     <!-- Fallback for browsers that don't support video -->
                     <p>Your browser doesn't support HTML5 video. Please update your browser to view the gameplay demo.</p>
                 </video>
             </div>
-            <p class="video-caption">Watch the classic Tetris gameplay with audio!</p>
+            <p class="video-caption">Watch the classic Tetris gameplay (visual demo only)</p>
             
             <!-- Game Screenshot -->
             <div class="screenshot-container">
@@ -67,7 +69,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">🎵</div>
                     <h3>Universal Audio System</h3>
-                    <p>Background music and sound effects with cross-platform compatibility</p>
+                    <p>Background music with cross-platform compatibility</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎮</div>
@@ -113,6 +115,26 @@
             </div>
         </section>
 
+        <!-- Amazon Q CLI Section -->
+        <section class="amazon-q-section">
+            <h2>🤖 This Game was Built Using Amazon Q CLI</h2>
+            <div class="q-container">
+                <div class="q-content">
+                    <ul class="q-features">
+                        <li>
+                            <strong>My approach involves experimenting with AI to craft effective prompts.</strong> The prompt I used was, "As a lover of retro games, create me a retro Tetris game that resembles the original game. I want different shapes to fall from the top of the rectangular screen. Players can move the pieces left and right, rotate them, and drop them fast. Once the shapes create a horizontal line without gaps, that line will disappear, and any blocks above it will drop down. Points are earned when a line clears out and when the user choose to drop them fast."
+                        </li>
+                        <li>
+                            <strong>This AI demonstrated a deep understanding of Tetris's core mechanics.</strong> It generated the code and conducted automated testing to identify and minimize bugs which was impressive and saved me so much time. It even recommended other features for the game that I didn't mention in my prompt.
+                        </li>
+                        <li>
+                            <strong>It tackled classic programming challenges by learning data patterns and their relationship to create a resolution</strong> versus making a guess about what the issue is.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- Download Section -->
         <section class="download">
             <h2>🚀 Get Started</h2>
@@ -122,13 +144,6 @@
                     <p>Get the source code and play locally</p>
                     <a href="https://github.com/hallkr86/retro_game" class="btn btn-primary">
                         View on GitHub
-                    </a>
-                </div>
-                <div class="download-card">
-                    <h3>🌐 Live Demo</h3>
-                    <p>Visit the deployed landing page</p>
-                    <a href="https://hallkr86.github.io/retro_game/" class="btn btn-secondary">
-                        View Live Site
                     </a>
                 </div>
             </div>
@@ -143,8 +158,8 @@
                     <button class="copy-btn" onclick="copyCode()">Copy</button>
                 </div>
                 <pre id="install-code"><code># Clone the repository
-git clone https://github.com/hallkr86/retro_game.git
-cd retro_game
+git clone https://github.com/username/retro-tetris.git
+cd retro-tetris
 
 # Install dependencies
 pip install pygame
@@ -183,7 +198,6 @@ python retro_tetris_main.py</code></pre>
                 <p>Inspired by the classic Tetris by Alexey Pajitnov</p>
                 <div class="footer-links">
                     <a href="https://github.com/hallkr86/retro_game">GitHub Repository</a>
-                    <a href="https://github.com/hallkr86/retro_game/issues">Report Issues</a>
                     <a href="https://github.com/hallkr86/retro_game/blob/main/LICENSE">License</a>
                 </div>
             </div>

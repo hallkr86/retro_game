@@ -141,6 +141,17 @@ body {
     margin: 0 auto;
 }
 
+/* Hide volume controls completely */
+.gameplay-video::-webkit-media-controls-volume-slider,
+.gameplay-video::-webkit-media-controls-mute-button {
+    display: none !important;
+}
+
+.gameplay-video::-moz-media-controls-volume-slider,
+.gameplay-video::-moz-media-controls-mute-button {
+    display: none !important;
+}
+
 /* Custom video controls styling */
 .gameplay-video::-webkit-media-controls-panel {
     background-color: rgba(0, 0, 0, 0.8);
@@ -339,19 +350,6 @@ body {
     position: relative;
 }
 
-.story-container::before {
-    content: '🎮';
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2.5rem;
-    background: #1a1a1a;
-    padding: 10px 20px;
-    border-radius: 50px;
-    border: 2px solid #4ecdc4;
-}
-
 .story-content p {
     font-size: 1.2rem;
     line-height: 1.8;
@@ -448,6 +446,79 @@ kbd {
     text-align: center;
 }
 
+/* Amazon Q CLI Section */
+.amazon-q-section {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.amazon-q-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ff6b6b;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.q-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 107, 107, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    border: 2px solid rgba(255, 107, 107, 0.3);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.q-container::before {
+    content: '🤖';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    background: #1a1a1a;
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: 2px solid #ff6b6b;
+}
+
+.q-content {
+    text-align: left;
+}
+
+.q-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.q-features li {
+    margin: 25px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border-left: 4px solid #ff6b6b;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.q-features li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.2);
+}
+
+.q-features li strong {
+    color: #ff6b6b;
+    display: block;
+    margin-bottom: 10px;
+}
+
 /* Download Section */
 .download {
     margin: 80px 0;
@@ -461,8 +532,8 @@ kbd {
 }
 
 .download-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 30px;
     max-width: 800px;
     margin: 0 auto;
@@ -659,9 +730,13 @@ code {
     }
     
     .feature-grid,
-    .controls-grid,
-    .download-options {
+    .controls-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .download-options {
+        flex-direction: column;
+        align-items: center;
     }
     
     .video-container {
@@ -683,6 +758,21 @@ code {
     .story-content p {
         font-size: 1.1rem;
         text-align: center;
+    }
+    
+    .q-container {
+        margin: 0 10px;
+        padding: 30px 20px;
+    }
+    
+    .q-features li {
+        font-size: 1rem;
+        padding: 15px;
+        margin: 20px 0;
+    }
+    
+    .q-features li:hover {
+        transform: translateX(5px);
     }
     
     .screenshot-container {
